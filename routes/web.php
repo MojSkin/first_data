@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PanelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PanelController::class, 'index'])->name('index');
+Route::post('/sendMessage', [PanelController::class, 'sendMessage'])->name('sendMessage');
+Route::post('/getCredit', [PanelController::class, 'getCredit'])->name('getCredit');
+Route::post('/getStatus', [PanelController::class, 'getStatus'])->name('getStatus');
