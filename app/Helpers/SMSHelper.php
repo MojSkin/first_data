@@ -282,11 +282,11 @@ class SMSHelper
             $this->username,
             $this->password,
         );
-        $code = isset($client[0])?(is_string($client[0])?(int) $client[0]:null):-1;
+        $code = (strlen($client)>=3)?(float) $client:(int) $client;
         $result = [
             'status' => !in_array($code, [-1, 0, 5, 6]),
-            'message' => $states[$code],
-            'code' => in_array($code, [-1, 0, 5, 6])?(float) $client[0]:$code,
+            'message' => in_array($code, [-1, 0, 5, 6])?$states[$code]:'Request process was successful',
+            'code' => $code,
         ];
         return $result;
     }
