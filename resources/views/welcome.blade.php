@@ -47,7 +47,7 @@
                                     <label for="recipients" class="col-12 col-md-3 col-form-label">Recipient(s): </label>
                                     <div class="col-md-9">
                                         <input type="text" class="form-control" id="recipients" name="recipients" value="{{ old('recipients') }}" required>
-                                        <small>if there are more than one SENDER, separate them with comma ","</small>
+                                        <small>if there are more than one RECIPIENT, separate them with comma ","</small>
                                     </div>
                                 </div>
                                 <div class="row mb-3">
@@ -97,7 +97,7 @@
                                     <label for="ids" class="col-12 col-md-3 col-form-label">Message id(s): </label>
                                     <div class="col-md-9">
                                         <input type="text" class="form-control" id="ids" name="ids" value="{{ old('ids') }}" required>
-                                        <small>if there are more than one SENDER, separate them with comma ","</small>
+                                        <small>if there are more than one MESSAGE ID, separate them with comma ","</small>
                                     </div>
                                 </div>
                                 <button class="btn btn-primary" type="submit">Ask for Status</button>
